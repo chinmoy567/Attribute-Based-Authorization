@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b1422;
+  --teal: #0f766e;
+  --sand: #fffbeb;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 8%, #fef9c3 0%, #fffbeb 35%, #fffbeb 100%);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(50px);
+  opacity: 0.24;
+}
+
+.orb-one {
+  top: -80px;
+  left: -90px;
+  height: 300px;
+  width: 300px;
+  background: #14b8a6;
+}
+
+.orb-two {
+  bottom: -120px;
+  right: -50px;
+  height: 320px;
+  width: 320px;
+  background: #fb923c;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(15, 118, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 45%, transparent 85%);
+}
+
+.btn-primary {
+  @apply rounded-xl bg-teal-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-teal-600 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn-ghost {
+  @apply rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50;
+}
+
+.code-card {
+  @apply overflow-x-auto rounded-2xl border border-slate-200 bg-slate-950 p-3 text-xs text-emerald-200;
+}
